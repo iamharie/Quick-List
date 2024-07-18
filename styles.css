@@ -152,6 +152,11 @@ footer .icon {
   text-decoration: line-through;
 }
 
+.closeBtn {
+  margin-left: 5px;
+  cursor: pointer;
+}
+
 /* scrollbar */
 ::-webkit-scrollbar {
   width: 12px;
