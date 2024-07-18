@@ -58,7 +58,6 @@ header h1 {
 .task {
   display: flex;
   flex-direction: column;
-  /* height: 40vh; */
 }
 .input {
   width: 450px;
@@ -155,6 +154,8 @@ footer .icon {
 .closeBtn {
   margin-left: 5px;
   cursor: pointer;
+  background: none;
+  border: none;
 }
 
 /* scrollbar */
