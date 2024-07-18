@@ -5,6 +5,21 @@ SPACING SYSTEM (px)
 FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
 
+/* 
+VIEWPORTS of this project
+header 20vh 
+view 25vh 
+view1 50vh
+footer 10vh */
+
+:root {
+  --background-image: linear-gradient(
+    to right,
+    rgba(119, 88, 88, 0.521),
+    rgba(96, 119, 96, 0.733)
+  );
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,28 +27,32 @@ FONT SIZE SYSTEM (px)
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Turret Road", sans-serif;
   margin: 0 auto;
   width: 900px;
-  background-color: #868e96;
+  background-color: #dee2e6;
+  height: 100vh;
 }
 
 header {
-  background-color: #dee2e6;
+  background-color: #868e96;
+  background-image: var(--background-image);
   height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 header h1 {
-  font-size: 36px;
-  font-weight: 600;
+  font-size: 42px;
+  font-weight: 800;
+  color: #f1f3f5;
 }
 
 .view {
-  height: 70vh;
-  background-color: #ffc078;
+  height: 25vh;
+  background-color: #dbe4ff;
 }
 
 .task {
@@ -46,37 +65,114 @@ header h1 {
   margin: 32px auto;
   height: 48px;
   text-align: center;
+  color: white;
   font-weight: 400;
   font-size: 20px;
+  box-shadow: 0 5px 20px rgb(148, 142, 142);
+  background-color: #212529;
+  border: none;
+  transition: transform 2s;
 }
+.input::placeholder {
+  font-family: "Turret Road", sans-serif;
+  color: #f1f3f5;
+  font-size: 20px;
+}
+.input:hover {
+  background-color: #495057;
+  transform: scale(1.1);
+  transition: 1s;
+  color: white;
+}
+
+.input:hover::placeholder {
+  color: white;
+}
+
 .btn {
   margin: 8px auto;
   font-size: 20px;
+  font-family: "Turret Road", sans-serif;
+  font-weight: 1000;
   padding: 8px 32px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 1s;
+  color: #212529;
+  background-image: linear-gradient(to right, #e9ecef, #f34704);
+}
+.btn:hover {
+  transform: scale(1.1);
+  transition: 1s;
 }
 
+.view2 {
+  height: 45vh;
+  background-color: #dbe4ff;
+  overflow: scroll;
+}
 .task-append {
   display: flex;
   flex-direction: column;
+  gap: 2px;
 }
 .task-added {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
-  margin-top: 24px;
+  gap: 2px;
+  margin-top: 12px;
+}
+
+.check {
+  width: 22px;
 }
 .task-added p {
   font-size: 20px;
 }
 footer {
-  background-color: #dee2e6;
+  background-image: var(--background-image);
   height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
+}
+
+footer .icon {
+  height: 24px;
 }
 /* strikethrough class */
+.text-strike {
+  font-size: 24px;
+}
+
 .strike {
   text-decoration: line-through;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 10px;
+  border: 3px solid #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0056b3;
+}
+
+::-webkit-scrollbar-corner {
+  background: #f0f0f0;
 }

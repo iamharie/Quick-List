@@ -13,7 +13,7 @@ btn.addEventListener("click", function (e) {
   const html = `
     <div class="task-added">
         <input type="checkbox" class="check" />
-        <p class="text-strike">${input.value}</p>
+        <h6 class="text-strike">${input.value}</h6>
     </div>
   `;
 
@@ -26,7 +26,7 @@ btn.addEventListener("click", function (e) {
     const strikeMe = document.querySelector(".text-strike");
     const checkbox = document.querySelector(".check");
     checkbox.addEventListener("change", function () {
-      strikeMe.classList.add("strike");
+      strikeMe.classList.toggle("strike");
     });
   } else {
     console.log("empty");
