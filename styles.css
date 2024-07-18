@@ -1,0 +1,73 @@
+/* Spacing System:
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0 auto;
+  width: 900px;
+  background-color: #868e96;
+}
+
+header {
+  background-color: #dee2e6;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.view {
+  height: 70vh;
+  background-color: #ffc078;
+}
+.task {
+  display: flex;
+  flex-direction: column;
+  /* height: 40vh; */
+}
+.input {
+  width: 450px;
+  margin: 32px auto;
+  height: 48px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+}
+button {
+  margin: 8px auto;
+  font-size: 20px;
+  padding: 8px 32px;
+}
+.task-added {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 24px;
+}
+.task-added p {
+  font-size: 20px;
+}
+footer {
+  background-color: #dee2e6;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* strikethrough class */
